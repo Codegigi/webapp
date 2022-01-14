@@ -18,11 +18,11 @@ const Table = () => {
     async function abc() {
 
         const web3 = new Web3();
-        web3.setProvider("http://dexit.imentus.com");
+        web3.setProvider("http://dataFeed.dexit.network");
         console.log("web3: ", web3);
 
         let ab = await web3.eth.getBlock("latest");
-        console.log("tttttttttttttthefjherfef", ab)
+        console.log('latest block data', ab)
         setData(ab)
         setProducts(ab.data)
     }

@@ -140,7 +140,7 @@ export default function Home() {
       {/* <button onClick={() => }>
     Click me
   </button> */}
-      {/* {data ===undefined?"":data} */}
+      {data ===undefined?"":data} */
 
       <div></div>
 
