@@ -18,7 +18,6 @@ import Test from './Test/Test'
 import Mycard from './myCard'
 import Card2 from './Card2'
 //import ReactJson from 'react-json-view'
-import Tempdata from './Tempdata'
 import Table from './Table'
 
 export default function Home() {
