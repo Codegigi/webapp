@@ -24,10 +24,9 @@ export default function Home() {
     const web3 = new Web3();
  
     web3.setProvider("https://testnet.dexit.network");
-    console.log("blocknumber")
-    let blockNumber = 3209;
-    console.log("We process block: " + blockNumber);
-    let block = await web3.eth.getBlock(blockNumber);
+   
+    //console.log("We process block: " + blockNumber);
+    let block = await web3.eth.getBlock('latest');
     console.log("new block :", block)
     let newdata= block.transactions.map(async (e)=>{
       console.log("eeeee",e)
