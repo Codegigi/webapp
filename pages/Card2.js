@@ -1,11 +1,3 @@
-//import Card from 'react-bootstrap/Card'
-    // const Card2 = () => {
-   
-//     return(
-
-    
-//     )
-// }
 
 import React from 'react';
 import { Card } from 'primereact/card';
@@ -27,10 +19,7 @@ const Card2 = () => {
 
     return (
         <div>
-            {/* <Card title="Simple Card" style={{ width: '25rem', marginBottom: '2em' }}>
-                <p className="p-m-0" style={{lineHeight: '1.5'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                    quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-            </Card> */}
+ 
 
             <Card title="Sign Up" subTitle="" style={{ width: '35em' }} footer={footer} header={header}>
                 <p className="p-m-0" style={{lineHeight: '1.5'}}> Become a member to enjoy unlimited benefits </p>
