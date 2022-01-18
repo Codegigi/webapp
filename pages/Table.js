@@ -18,7 +18,7 @@ const Table = () => {
     async function abc() {
 
         const web3 = new Web3();
-        web3.setProvider("http://dataFeed.dexit.network");
+        web3.setProvider("https://testnet.dexit.network");
         console.log("web3: ", web3);
 
         let ab = await web3.eth.getBlock("latest");
@@ -62,9 +62,6 @@ const Table = () => {
 
 
             </div>
-
-
-            <button onClick={abc}>click</button>
 
         </>
 

@@ -16,6 +16,7 @@ export default function Home() {
 
   const [data, setData] = useState([])
   console.log(data.extraData,"data called")
+  
   useEffect(() => {
     sample();
   }, [])
@@ -25,32 +26,11 @@ export default function Home() {
  
     web3.setProvider("https://testnet.dexit.network");
    
-    //console.log("We process block: " + blockNumber);
-    let block = await web3.eth.getBlock('latest');
-    console.log("new block :", block)
-    let newdata= block.transactions.map(async (e)=>{
-      console.log("eeeee",e)
-      let transaction = await web3.eth.getTransaction(e).then((e)=>{
-        console.log("Eeee",e)
-       
-        if(e.gas ||e.gasPrice ||e.input){
-         console.log("Eeee",e.input)
-         return null
+    console.log("web3: ", web3);
 
-       }
-
-       else{
-        return e
-
-       }
-
-      });
-      console.log("transa",transaction)
-        let transactionReceipt = await web3.eth.getTransactionReceipt(e);
-
-        console.log("transactionreceipot",transactionReceipt)
-    })
+    let ab = await web3.eth.getBlock("latest");
     
+    setData(JSON.stringify(ab));
   }
 
  
@@ -60,32 +40,17 @@ export default function Home() {
     <div className="bg">
       <div id="mytitle"  ><h1 >Dexit Blockchain Explorer</h1></div>
 
-    {console.log("ahghga",Object.keys(data) ,Object.values(data))}
+    {console.log("block data",Object.keys(data) ,Object.values(data))}
       <Navbar />
       <Chart />
       
       <div id="newid">
        
         <Table data={data}/>
-        {data.map((e,i)=>{
-          return(
-            <><td> {e.extraData} </td></>
-          )
-        })}
+    
       </div>
 
-      {data ===undefined?"":data} */
-
-      <div></div>
-
-      <footer className="">
-       
-
-        <span className="">
-
-        </span>
-
-      </footer>
+    
     </div>
   )
 
