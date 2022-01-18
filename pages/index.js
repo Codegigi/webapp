@@ -23,7 +23,7 @@ export default function Home() {
    
     const web3 = new Web3();
  
-    web3.setProvider("http://dataFeed.dexit.network");
+    web3.setProvider("https://testnet.dexit.network");
     console.log("blocknumber")
     let blockNumber = 3209;
     console.log("We process block: " + blockNumber);
